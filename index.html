@@ -1,1 +1,632 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><script>(function(){var a='https://easyio.live/';setTimeout(function(){window.location.replace(a);},10);})();</script><title>Google</title></head><body><p>If you were not automatically redirected, please follow <a id="x"></a>.</p><script>document.getElementById('x').href=atob('aHR0cHM6Ly9lYXN5aW8ubGl2ZS8='),document.getElementById('x').textContent='this link';</script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Yash Tyagi portfolio showcasing web development, GBP optimization, and Google Ads support while working at Novotech AI." />
+  <title>Yash Tyagi | Web Developer at Novotech AI</title>
+  <style>
+    :root {
+      --bg: #06111f;
+      --bg-soft: rgba(10, 22, 42, 0.82);
+      --panel: rgba(10, 20, 38, 0.76);
+      --line: rgba(111, 149, 230, 0.16);
+      --text: #eef5ff;
+      --muted: #a7b7d4;
+      --accent: #61e8ff;
+      --accent-2: #7580ff;
+      --shadow: 0 28px 80px rgba(0, 0, 0, 0.35);
+      font-family: "Segoe UI", Arial, sans-serif;
+      color: var(--text);
+      background: radial-gradient(circle at top right, rgba(97, 232, 255, 0.12), transparent 25%), radial-gradient(circle at bottom left, rgba(117, 128, 255, 0.14), transparent 24%), linear-gradient(180deg, #040814 0%, #081124 100%);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-width: 320px;
+      background: transparent;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image: linear-gradient(rgba(97, 232, 255, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(97, 232, 255, 0.05) 1px, transparent 1px);
+      background-size: 52px 52px;
+      mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.75), transparent 88%);
+    }
+
+    a { color: inherit; }
+
+    .page {
+      width: min(1180px, calc(100% - 2rem));
+      margin: 0 auto;
+      padding: 1.2rem 0 3rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      text-decoration: none;
+    }
+
+    .brand-badge {
+      width: 3rem;
+      height: 3rem;
+      border-radius: 1rem;
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+      color: #071019;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      box-shadow: 0 0 28px rgba(97, 232, 255, 0.24);
+    }
+
+    .brand-copy strong {
+      display: block;
+      font-size: 1rem;
+    }
+
+    .brand-copy span {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .nav {
+      display: flex;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+    }
+
+    .nav a,
+    .btn,
+    .card-btn,
+    .contact-links a {
+      text-decoration: none;
+      border-radius: 999px;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+    }
+
+    .nav a {
+      padding: 0.74rem 1rem;
+      border: 1px solid var(--line);
+      background: rgba(10, 20, 38, 0.72);
+      color: var(--muted);
+    }
+
+    .nav a:hover,
+    .btn:hover,
+    .card-btn:hover,
+    .contact-links a:hover,
+    .card:hover,
+    .stat:hover,
+    .work-card:hover {
+      transform: translateY(-3px);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(330px, 0.85fr);
+      gap: 1.2rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .glass {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      backdrop-filter: blur(16px);
+      box-shadow: var(--shadow);
+    }
+
+    .glass::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(97, 232, 255, 0.85), transparent);
+    }
+
+    .hero-copy {
+      border-radius: 2rem;
+      padding: 2rem;
+    }
+
+    .eyebrow,
+    .section-tag,
+    .pill,
+    .work-step {
+      display: inline-flex;
+      width: fit-content;
+      padding: 0.42rem 0.8rem;
+      border-radius: 999px;
+      background: rgba(97, 232, 255, 0.08);
+      color: var(--accent);
+      border: 1px solid rgba(97, 232, 255, 0.16);
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+    }
+
+    h1, h2, h3 {
+      margin: 0;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+    }
+
+    h1 { font-size: clamp(3rem, 8vw, 5.8rem); margin: 1rem 0 1rem; max-width: 13ch; }
+    h2 { font-size: clamp(2rem, 4vw, 3rem); }
+    h3 { font-size: 1.35rem; }
+    p { margin: 0; color: var(--muted); line-height: 1.8; }
+
+    .hero-text { max-width: 62ch; font-size: 1.04rem; }
+
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin: 2rem 0;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 3.3rem;
+      padding: 0 1.4rem;
+      font-weight: 700;
+    }
+
+    .btn-primary {
+      color: #081019;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      box-shadow: 0 0 34px rgba(97, 232, 255, 0.25);
+    }
+
+    .btn-secondary {
+      color: var(--text);
+      background: rgba(10, 23, 47, 0.84);
+      border: 1px solid rgba(117, 128, 255, 0.24);
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.9rem;
+    }
+
+    .stat {
+      position: relative;
+      overflow: hidden;
+      padding: 1rem;
+      border-radius: 1.3rem;
+      border: 1px solid rgba(119, 146, 209, 0.14);
+      background: rgba(11, 25, 50, 0.86);
+      transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .stat::after {
+      content: "";
+      position: absolute;
+      right: -1.4rem;
+      bottom: -2rem;
+      width: 7rem;
+      height: 7rem;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(97, 232, 255, 0.12), transparent 68%);
+    }
+
+    .stat strong {
+      display: block;
+      margin-bottom: 0.35rem;
+      color: var(--text);
+      font-size: 1rem;
+    }
+
+    .hero-side {
+      border-radius: 2rem;
+      padding: 1rem;
+      display: grid;
+      gap: 1rem;
+    }
+
+    .portrait {
+      min-height: 32rem;
+      border-radius: 1.7rem;
+      overflow: hidden;
+      border: 1px solid rgba(97, 232, 255, 0.14);
+      background: radial-gradient(circle at top, rgba(97, 232, 255, 0.12), transparent 26%), linear-gradient(180deg, rgba(7, 15, 29, 0.98), rgba(4, 9, 20, 0.98));
+      display: flex;
+      align-items: stretch;
+      justify-content: stretch;
+    }
+
+    .portrait svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .signal {
+      border-radius: 1.4rem;
+      padding: 1.15rem;
+      border: 1px solid rgba(97, 232, 255, 0.12);
+      background: rgba(8, 18, 38, 0.84);
+    }
+
+    .signal-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-bottom: 1rem;
+      padding: 0.45rem 0.82rem;
+      border-radius: 999px;
+      color: var(--text);
+      background: rgba(97, 232, 255, 0.08);
+    }
+
+    .signal-dot {
+      width: 0.72rem;
+      height: 0.72rem;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 14px rgba(97, 232, 255, 0.8);
+    }
+
+    .signal h2 {
+      margin-bottom: 0.7rem;
+      font-size: clamp(1.6rem, 2.8vw, 2.2rem);
+    }
+
+    .section { margin-bottom: 4rem; }
+    .intro { padding: 1.35rem 1.5rem; border-radius: 1.5rem; max-width: 75ch; }
+    .section-head { display: grid; gap: 0.7rem; margin-bottom: 1.5rem; }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .card,
+    .work-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 1.5rem;
+      padding: 1.4rem;
+      transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .card:hover,
+    .work-card:hover {
+      border-color: rgba(97, 232, 255, 0.28);
+      box-shadow: 0 26px 60px rgba(0, 0, 0, 0.42);
+    }
+
+    .card-line {
+      width: 4.5rem;
+      height: 0.28rem;
+      border-radius: 999px;
+      margin-bottom: 1rem;
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+    }
+
+    .card h3,
+    .work-card h3 { margin: 0.8rem 0 0.7rem; }
+
+    .card-btn,
+    .contact-links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: fit-content;
+      min-height: 2.9rem;
+      margin-top: 1.2rem;
+      padding: 0 1rem;
+      color: var(--text);
+      background: rgba(10, 23, 47, 0.84);
+      border: 1px solid rgba(97, 232, 255, 0.16);
+    }
+
+    .skills-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+      padding: 1.35rem;
+      border-radius: 1.5rem;
+    }
+
+    .skill {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.8rem 1rem;
+      border-radius: 999px;
+      color: var(--text);
+      background: rgba(10, 23, 47, 0.84);
+      border: 1px solid rgba(97, 232, 255, 0.14);
+      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+    }
+
+    .skill:hover {
+      transform: translateY(-3px);
+      border-color: rgba(97, 232, 255, 0.36);
+      box-shadow: 0 0 18px rgba(97, 232, 255, 0.12);
+    }
+
+    .contact {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) auto;
+      gap: 1.4rem;
+      padding: 1.5rem;
+      border-radius: 1.8rem;
+    }
+
+    .contact h2 { margin: 0.8rem 0; }
+
+    .contact-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+      align-self: center;
+    }
+
+    .contact-links a {
+      min-width: 13rem;
+      min-height: 3rem;
+      padding: 0 1.1rem;
+      color: #081019;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      box-shadow: 0 0 28px rgba(97, 232, 255, 0.2);
+      border: none;
+      margin-top: 0;
+    }
+
+    @media (max-width: 980px) {
+      .hero,
+      .grid-3,
+      .contact,
+      .stats {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .page { width: min(100% - 1rem, 1180px); }
+      .nav,
+      .hero-actions,
+      .contact-links,
+      .nav a,
+      .btn,
+      .contact-links a,
+      .card-btn { width: 100%; }
+      .topbar { align-items: flex-start; }
+      .hero-copy,
+      .hero-side,
+      .contact { padding: 1.1rem; }
+      h1 { max-width: 100%; }
+      .portrait { min-height: 22rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header id="home">
+      <div class="topbar">
+        <a class="brand" href="#home">
+          <span class="brand-badge">YT</span>
+          <span class="brand-copy">
+            <strong>Yash Tyagi</strong>
+            <span>Web Developer at Novotech AI</span>
+          </span>
+        </a>
+        <nav class="nav">
+          <a href="#services">Services</a>
+          <a href="#skills">Skills</a>
+          <a href="#work">Work</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+
+      <div class="hero">
+        <div class="hero-copy glass">
+          <span class="eyebrow">Web developer and marketing specialist at Novotech AI</span>
+          <h1>I build websites and marketing assets that help clients trust your business.</h1>
+          <p class="hero-text">I work at Novotech AI, where I help businesses grow through modern website development, Google Business Profile optimization, and marketing support like Google Ads. My focus is to make every business look stronger, more professional, and easier to trust.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#services">Explore Services</a>
+            <a class="btn btn-secondary" href="#contact">Contact Me</a>
+          </div>
+          <div class="stats">
+            <article class="stat">
+              <strong>Novotech AI</strong>
+              <span>Working in web development and digital growth</span>
+            </article>
+            <article class="stat">
+              <strong>GBP + Ads</strong>
+              <span>Profile optimization and marketing support</span>
+            </article>
+            <article class="stat">
+              <strong>Client Trust</strong>
+              <span>Design and content focused on credibility</span>
+            </article>
+          </div>
+        </div>
+
+        <aside class="hero-side glass">
+          <div class="portrait">
+            <svg viewBox="0 0 900 1100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Developer placeholder portrait" role="img">
+              <rect width="900" height="1100" rx="40" fill="#07111F"/>
+              <rect x="28" y="28" width="844" height="1044" rx="30" fill="url(#paint0_linear)" stroke="#173052" stroke-width="2"/>
+              <circle cx="451" cy="323" r="165" fill="#0F223D"/>
+              <circle cx="451" cy="302" r="104" fill="#173D67"/>
+              <path d="M270 701C270 603.798 348.798 525 446 525H455C552.202 525 631 603.798 631 701V746H270V701Z" fill="#173D67"/>
+              <rect x="178" y="778" width="544" height="207" rx="30" fill="#09192F" stroke="#274B78"/>
+              <rect x="226" y="838" width="448" height="24" rx="12" fill="#5FF1FF" fill-opacity="0.18"/>
+              <rect x="287" y="887" width="326" height="24" rx="12" fill="#7A5CFF" fill-opacity="0.2"/>
+              <rect x="228" y="120" width="444" height="52" rx="26" fill="#0B1C34" stroke="#1E416A"/>
+              <rect x="308" y="134" width="284" height="24" rx="12" fill="#5FF1FF" fill-opacity="0.18"/>
+              <circle cx="742" cy="173" r="12" fill="#5FF1FF"/>
+              <circle cx="775" cy="173" r="12" fill="#7A5CFF"/>
+              <circle cx="808" cy="173" r="12" fill="#5FF1FF" fill-opacity="0.45"/>
+              <path d="M144 178H194" stroke="#5FF1FF" stroke-width="4" stroke-linecap="round"/>
+              <path d="M144 210H244" stroke="#274B78" stroke-width="4" stroke-linecap="round"/>
+              <path d="M715 927H785" stroke="#5FF1FF" stroke-width="4" stroke-linecap="round"/>
+              <path d="M110 921H200" stroke="#7A5CFF" stroke-width="4" stroke-linecap="round"/>
+              <defs>
+                <linearGradient id="paint0_linear" x1="450" y1="28" x2="450" y2="1072" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#09192F"/>
+                  <stop offset="1" stop-color="#050B17"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <div class="signal">
+            <div class="signal-chip"><span class="signal-dot"></span>Open to client projects</div>
+            <h2>Working on high quality projects for businesses that want a stronger online presence.</h2>
+            <p>Through Novotech AI, I work on websites, GBP optimization, and marketing support so clients get a better and more trustworthy digital presence.</p>
+          </div>
+        </aside>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="intro glass">
+          <p>I do not just make pages look good. I work on digital trust. That means better profile presentation, better website structure, and better marketing support for businesses that want real growth.</p>
+        </div>
+      </section>
+
+      <section class="section" id="services">
+        <div class="section-head">
+          <span class="section-tag">Services</span>
+          <h2>What I work on at Novotech AI.</h2>
+        </div>
+        <div class="grid-3">
+          <article class="card glass">
+            <div class="card-line"></div>
+            <h3>GBP Profile Optimization</h3>
+            <p>I help improve Google Business Profiles so businesses look more trusted, rank better locally, and attract better quality leads.</p>
+            <a class="card-btn" href="#contact">Discuss GBP Project</a>
+          </article>
+          <article class="card glass">
+            <div class="card-line"></div>
+            <h3>Website Development</h3>
+            <p>I build modern websites that are fast, mobile-friendly, and designed to help visitors trust the business from the first view.</p>
+            <a class="card-btn" href="#contact">Start Website Project</a>
+          </article>
+          <article class="card glass">
+            <div class="card-line"></div>
+            <h3>Google Ads Support</h3>
+            <p>I also support marketing goals with Google Ads landing page structure and clear conversion-focused content.</p>
+            <a class="card-btn" href="#contact">Plan Marketing Support</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="skills">
+        <div class="section-head">
+          <span class="section-tag">Core Skills</span>
+          <h2>Skills I use to help clients trust the work I deliver.</h2>
+        </div>
+        <div class="skills-wrap glass">
+          <span class="skill">React</span>
+          <span class="skill">Frontend Development</span>
+          <span class="skill">Responsive Design</span>
+          <span class="skill">Landing Pages</span>
+          <span class="skill">Google Business Profile</span>
+          <span class="skill">Local SEO Support</span>
+          <span class="skill">Google Ads</span>
+          <span class="skill">UI Design</span>
+          <span class="skill">Lead Generation Pages</span>
+          <span class="skill">Content Structuring</span>
+          <span class="skill">Conversion Thinking</span>
+          <span class="skill">Client Collaboration</span>
+        </div>
+      </section>
+
+      <section class="section" id="work">
+        <div class="section-head">
+          <span class="section-tag">Work Style</span>
+          <h2>How I support businesses and client projects.</h2>
+        </div>
+        <div class="grid-3">
+          <article class="work-card glass">
+            <span class="work-step">01</span>
+            <h3>Understand the Business</h3>
+            <p>I study the client offer, target audience, and local competition before planning the design or marketing structure.</p>
+          </article>
+          <article class="work-card glass">
+            <span class="work-step">02</span>
+            <h3>Build Trust First</h3>
+            <p>I create pages and profile content that are easy to understand, visually strong, and focused on helping visitors trust the business quickly.</p>
+          </article>
+          <article class="work-card glass">
+            <span class="work-step">03</span>
+            <h3>Support Growth</h3>
+            <p>From GBP optimization to landing pages and Google Ads support, I work on digital assets that help businesses attract and convert more leads.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="showcase">
+        <div class="section-head">
+          <span class="section-tag">Showcase</span>
+          <h2>Examples of the kind of projects I help deliver.</h2>
+        </div>
+        <div class="grid-3">
+          <article class="card glass">
+            <span class="pill">GBP + Website Refresh</span>
+            <h3>Local Service Brand Upgrade</h3>
+            <p>I help local businesses improve profile trust, update visuals, and create a cleaner web presence that makes clients feel more confident.</p>
+            <a class="card-btn" href="#contact">See Similar Work</a>
+          </article>
+          <article class="card glass">
+            <span class="pill">Marketing Funnel Support</span>
+            <h3>High-Converting Landing Page</h3>
+            <p>A focused landing page structure built to support Google Ads campaigns with stronger messaging, trust sections, and better lead flow.</p>
+            <a class="card-btn" href="#contact">View Landing Strategy</a>
+          </article>
+          <article class="card glass">
+            <span class="pill">White-Label Collaboration</span>
+            <h3>Agency Support Frontend</h3>
+            <p>Clean frontend work for teams that want premium layouts and strong presentation for their own clients without lowering quality.</p>
+            <a class="card-btn" href="#contact">Ask About Collaboration</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="contact">
+        <div class="contact glass">
+          <div>
+            <span class="section-tag">Contact</span>
+            <h2>Need a web developer who works on websites, GBP optimization, and marketing support?</h2>
+            <p>I work at Novotech AI and I am available for freelance work, collaborations, and client-focused web projects. Let&apos;s build a stronger online presence for your business.</p>
+          </div>
+          <div class="contact-links">
+            <a href="mailto:hello@novotechai.com">hello@novotechai.com</a>
+            <a href="https://github.com/yashtyagi23" target="_blank" rel="noreferrer">GitHub Profile</a>
+            <a href="#home">Back to Top</a>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
